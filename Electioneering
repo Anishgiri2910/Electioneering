@@ -1,0 +1,13 @@
+from PIL import Image
+if __name__ == '__main__':
+	msg=""
+	img=Image.open('solved.png')
+	for y in range (4):
+	     for x in range (44):
+	            R,G,B=img.getpixel((x,y))
+	            print (R,G,B)
+	            if(R==255 or G==255 or B==255):
+	                msg+=str(1)
+	            else:
+	                msg+=str(0)
+	print (msg)
